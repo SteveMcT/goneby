@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito');
+* {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
+}

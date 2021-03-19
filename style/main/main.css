@@ -1,0 +1,101 @@
+main {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  margin-top: 8em;
+  position: relative;
+  z-index: 4;
+}
+
+main #img-slider {
+  height: 80vh;
+  -webkit-perspective: 50px;
+          perspective: 50px;
+  width: 80%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+main #img-slider .img-slider-block {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+main #img-slider .img-slider-block .img-slider-image {
+  height: 100%;
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  display: inline-block;
+}
+
+main #img-slider .img-slider-block .img-slider-block-text {
+  display: inline-block;
+  vertical-align: top;
+  margin: 6em 0 0 6em;
+}
+
+main #img-slider .img-slider-block .img-slider-block-text h1 {
+  font-size: 6em;
+}
+
+main #img-slider .img-slider-block .img-slider-block-text p {
+  font-size: 40px;
+}
+
+main #next-slide,
+main #previous-slide {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background: transparent;
+  font-size: 2em;
+  position: relative;
+  -webkit-transition: .4s box-shadow -webkit-box-shadow -moz-box-shadow;
+  transition: .4s box-shadow -webkit-box-shadow -moz-box-shadow;
+  -webkit-transition: .08s;
+  transition: .08s;
+  width: 2em;
+  color: #fff;
+  margin: 0 calc(5% - 1.2em);
+}
+
+main #next-slide::before,
+main #previous-slide::before {
+  content: '';
+  border-radius: 4px;
+  position: absolute;
+  height: 100%;
+  width: 0;
+  background: #fff;
+  -webkit-transition: .4s;
+  transition: .4s;
+  top: 0;
+  mix-blend-mode: difference;
+}
+
+main #next-slide:first-child::before,
+main #previous-slide:first-child::before {
+  right: 0;
+}
+
+main #next-slide:last-child::before,
+main #previous-slide:last-child::before {
+  left: 0;
+}
+
+main #next-slide:hover::before,
+main #previous-slide:hover::before {
+  mix-blend-mode: difference;
+  width: 100%;
+}
+
+main #next-slide:active,
+main #previous-slide:active {
+  box-shadow: 0px 0px 14px 0px white;
+  -webkit-box-shadow: 0px 0px 14px 0px white;
+  -moz-box-shadow: 0px 0px 14px 0px white;
+}
+/*# sourceMappingURL=main.css.map */

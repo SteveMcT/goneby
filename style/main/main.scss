@@ -1,0 +1,85 @@
+main {
+    * {
+        // border: 1px solid red !important;
+    }
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 8em;
+    position: relative;
+    z-index: 4;
+    #img-slider {
+        height: 80vh;
+        perspective: 50px;
+        width: 80%;
+        display: inline-block;
+        vertical-align: middle;
+        .img-slider-block {
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+            .img-slider-image {
+                height: 100%;
+                transition: transform .2s;
+                display: inline-block;
+            }
+            .img-slider-block-text {
+                display: inline-block;
+                vertical-align: top;
+                margin: 6em 0 0 6em;
+                h1 {
+                    font-size: 6em
+                }
+                p {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    #next-slide,
+    #previous-slide {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        background: transparent;
+        font-size: 2em;
+        position: relative;
+        transition: .4s box-shadow -webkit-box-shadow -moz-box-shadow;
+        transition: .08s;
+        width: 2em;
+        color: #fff;
+        margin: 0 calc(5% - 1.2em);
+        &::before {
+            content: '';
+            border-radius: 4px;
+            position: absolute;
+            height: 100%;
+            width: 0;
+            background: #fff;
+            transition: .4s;
+            top: 0;
+            mix-blend-mode: difference;
+        }
+        &:first-child {
+            &::before {
+                right: 0;
+            }
+        }
+        &:last-child {
+            &::before {
+                left: 0;
+            }
+        }
+        &:hover {
+            &::before {
+                mix-blend-mode: difference;
+                width: 100%;
+            }
+        }
+        &:active {
+            box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 1);
+            -webkit-box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 1);
+            -moz-box-shadow: 0px 0px 14px 0px rgba(255, 255, 255, 1);
+        }
+    }
+}
