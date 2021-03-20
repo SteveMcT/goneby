@@ -2,12 +2,12 @@
 * {
     margin: 0;
     font-family: 'Nunito', sans-serif;
+    cursor: none;
 }
 
 button {
     border: none;
     outline: none;
-    cursor: pointer;
 }
 
 body,
@@ -17,4 +17,5 @@ html {
     color: #fff;
     background: #000;
     overflow-x: hidden;
+    cursor: url(./../img/cursor/cursed.png) !important
 }

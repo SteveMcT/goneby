@@ -75,6 +75,7 @@ main #next-slide,
 main #previous-slide {
   display: inline-block;
   vertical-align: middle;
+  border-radius: 4px;
   position: relative;
   background: transparent;
   font-size: 2em;

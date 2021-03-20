@@ -1,7 +1,5 @@
 let slideIndex = 1;
 
-$(document).ready(() => { showSlide(slideIndex) })
-
 function showSlide(n) {
     let slides = $('.img-slider-block')
 

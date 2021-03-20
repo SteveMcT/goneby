@@ -7,11 +7,6 @@ header {
   background: transparent;
 }
 
-header :is(img,
-p) {
-  cursor: pointer;
-}
-
 header img {
   display: inline-block;
   vertical-align: center;

@@ -9,31 +9,57 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/main/main.css">
     <link rel="stylesheet" href="style/header/header.css">
+    <link rel="stylesheet" href="style/cursor/cursor.css">
     <link rel="stylesheet" href="style/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="./js/slideshow.js"></script>
     <script type="text/javascript" src="./js/slider-hover.js"></script>
+    <script type="text/javascript" src="./style/cursor/mouse.js"></script>
+
+    <script>
+        $(document).ready(() => {
+            showSlide(slideIndex)
+
+            document.addEventListener('keydown', function(e) {
+                switch (e.keyCode) {
+                    case 37:
+                        plusSlides(-1)
+                        break;
+                    case 39:
+                        plusSlides(1)
+                        break;
+                }
+            });
+
+            $('img').each((i, elem) => {
+                elem.setAttribute('draggable', false)
+            })
+        })
+    </script>
+
     <link rel="icon" href="./img/logo/goneby_wing_white.svg" type="image/png">
 
     <title>GoneBy</title>
 </head>
 
 <body>
+    <div class="dl-cursor"></div>
+    <div class="dl-fill"></div>
     <header>
         <img src="./img/logo/goneby_wing_white.svg" alt="Logo">
         <nav>
-            <p>Download</p>
-            <p>Help</p>
-            <p>Contact</p>
+            <p class="nav-p">Download</p>
+            <p class="nav-p">Help</p>
+            <p class="nav-p">Contact</p>
         </nav>
     </header>
 
     <main>
-        <button id="next-slide" onclick="plusSlides(1)">&larr;</button>
+        <button id="next-slide" onclick="plusSlides(-1)">&larr;</button>
         <div id="img-slider">
             <div class="img-slider-block">
-                <img class="img-slider-image" src="img/login.png" alt="">
+                <img class="img-slider-image" src="img/wellcum.png" alt="">
                 <div class="img-slider-block-text">
                     <h1>This is Goneby</h1>
                     <p>With Goneby, you can create rooms and let others know where you are, without actually telling them where you are! Goneby asks you for a short description of your current location, which can then be shared securely with members of yourroom.</p>
@@ -42,7 +68,7 @@
                 </div>
             </div>
             <div class="img-slider-block">
-                <img class="img-slider-image" src="img/wellcum.png" alt="">
+                <img class="img-slider-image" src="img/login.png" alt="">
                 <div class="img-slider-block-text">
                     <h1>Secure and Private</h1>
                     <p>Security and privacy has always been one of the biggest goals here at Goneby. We use end-to-end encryption for important data, like your login information. No one at Goneby can ever view see your location!</p>
@@ -51,7 +77,7 @@
                 </div>
             </div>
             <div class="img-slider-block">
-                <img class="img-slider-image" src="img/profile.png" alt="">
+                <img class="img-slider-image" src="img/room.png" alt="">
                 <div class="img-slider-block-text">
                     <h1>Free and Unlimited</h1>
                     <p>Goneby allows you to create an unlimited amount of rooms, your location can also be different for every room. The feature allows you to create different rooms for various contexts, like family, school or even on trips!</p>
@@ -70,7 +96,7 @@
                 </div>
             </div>
             <div class="img-slider-block">
-                <img class="img-slider-image" src="img/room.png" alt="">
+                <img class="img-slider-image" src="img/profile.png" alt="">
                 <div class="img-slider-block-text">
                     <h1>Give it a try!</h1>
                     <p>Goneby is the best way to share your location with loved ones without actually telling them your coordinates exactly. Just type a few words and everyone will know! Goneby won't ever see your exact location, in fact, we never ask for
@@ -80,7 +106,7 @@
                 </div>
             </div>
         </div>
-        <button id="previous-slide" onclick="plusSlides(-1)">&rarr;</button>
+        <button id="previous-slide" onclick="plusSlides(1)">&rarr;</button>
     </main>
 </body>
 
