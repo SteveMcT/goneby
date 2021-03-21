@@ -17,9 +17,13 @@ main #img-slider {
 }
 
 main #img-slider .img-slider-block {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
+  right: 0;
   height: 100%;
+  -webkit-transition: 1.2s !important;
+  transition: 1.2s !important;
 }
 
 main #img-slider .img-slider-block .img-slider-image {
