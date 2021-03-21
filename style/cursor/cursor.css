@@ -1,19 +1,21 @@
-.dl-cursor {
-  background: #fff;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  position: fixed;
-  left: 0;
-  top: 0;
+.dl-cursor,
+.dl-fill {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   pointer-events: none;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
   visibility: hidden;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.dl-cursor {
+  background: #fff;
+  width: 6px;
+  height: 6px;
+  left: 0;
+  top: 0;
   -webkit-transition: width height, 4s !important;
   transition: width height, 4s !important;
   z-index: 10000;
@@ -24,40 +26,31 @@
   width: 38px;
   height: 38px;
   border: 1px solid #fff;
-  border-radius: 50%;
-  position: fixed;
+  position: absolute;
   -webkit-transition: -webkit-box-shadow .8s;
   transition: -webkit-box-shadow .8s;
   transition: box-shadow .8s;
   transition: box-shadow .8s, -webkit-box-shadow .8s;
   left: 0;
   top: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  pointer-events: none;
-  -webkit-transform: translate(50%, 50%);
-          transform: translate(50%, 50%);
   -webkit-transition: .15s ease;
   transition: .15s ease;
-  visibility: hidden;
   z-index: 10000;
 }
 
 .dl-fill::before {
-  background-color: rgba(255, 255, 255, 0.5);
+  content: '';
+  background: #ffffff80;
   display: block;
   border-radius: 50%;
-  content: '';
   width: 100%;
   height: 100%;
   left: 0;
   top: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .dl-fill.cursor-grow {
@@ -69,7 +62,7 @@
   opacity: 1;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 /*# sourceMappingURL=cursor.css.map */
