@@ -1,5 +1,7 @@
 .dl-cursor,
-.dl-fill {
+.dl-fill,
+.dl-fill::before {
+  position: absolute;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -7,6 +9,9 @@
   pointer-events: none;
   visibility: hidden;
   position: absolute;
+  left: 0;
+  z-index: 10000;
+  top: 0;
   border-radius: 50%;
 }
 
@@ -14,41 +19,33 @@
   background: #fff;
   width: 6px;
   height: 6px;
-  left: 0;
-  top: 0;
   -webkit-transition: width height, 4s !important;
   transition: width height, 4s !important;
-  z-index: 10000;
+}
+
+.dl-fill,
+.dl-fill::before {
+  display: block;
 }
 
 .dl-fill {
-  display: block;
   width: 38px;
   height: 38px;
   border: 1px solid #fff;
-  position: absolute;
   -webkit-transition: -webkit-box-shadow .8s;
   transition: -webkit-box-shadow .8s;
   transition: box-shadow .8s;
   transition: box-shadow .8s, -webkit-box-shadow .8s;
-  left: 0;
-  top: 0;
   -webkit-transition: .15s ease;
   transition: .15s ease;
-  z-index: 10000;
 }
 
 .dl-fill::before {
   content: '';
   background: #ffffff80;
-  display: block;
-  border-radius: 50%;
+  opacity: 0;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
-  visibility: hidden;
-  opacity: 0;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
