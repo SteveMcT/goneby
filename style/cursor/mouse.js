@@ -9,10 +9,10 @@ $(document).ready(() => {
             visibility: 'inherit'
         });
     });
-    $('button').mouseenter(() => {
+    $('button, .nav-p, #header-logo').mouseenter(() => {
         $('.dl-fill').addClass('cursor-grow')
     })
-    $('button').mouseleave(() => {
+    $('button, .nav-p, #header-logo').mouseleave(() => {
         $('.dl-fill').removeClass('cursor-grow')
     })
     $(document).mouseleave(() => {
