@@ -11,14 +11,8 @@ function showSlide(n, number) {
         slides[i].style.opacity = '0'
     }
 
-    let element = slides[slideIndex - 1]
-
-    // console.log(n)
-
-    slides[slideIndex - 1].style.right = number == 1 ? '-18%' : '18%'
     slides[slideIndex - 1].style.display = 'block'
     setTimeout(() => {
-        slides[slideIndex - 1].style.right = '0%'
         slides[slideIndex - 1].style.opacity = '100%'
     }, 100)
 
