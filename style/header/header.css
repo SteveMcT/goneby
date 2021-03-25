@@ -4,7 +4,10 @@ header {
   top: 0;
   padding: .8em;
   width: 100%;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.205);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 400;
 }
 
 header img {
