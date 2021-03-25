@@ -4,7 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="identifier-url" content="http://www.goneby.me/" />
+    <link rel="icon" href="./img/logo/goneby_wing_white.svg" type="image/png">
+    <meta name="title" content="Goneby" />
+    <meta name="description" content="Official Download page for Goneby - Tell your friends where you are without telling your location" />
+    <meta name="abstract" content="Official Download page for Goneby - Tell your friends where you are without telling your location" />
+    <meta name="keywords" content="Goneby, Location, SteveMcT, Laurens Kropf, Jonathan Malek, Goneby me" />
+    <meta name="author" content="SteveMcT" />
+    <meta name="revisit-after" content="30" />
+    <meta name="language" content="EN" />
+    <meta name="copyright" content="© 2021 SteveMcT" />
+    <meta name="page-topic" content="Software">
+    <meta name="page-type" content="Software Download">
+    <meta name="audience" content="Everyone">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://goneby.me/">
+    <meta property="og:title" content="Goneby">
+    <meta property="og:description" content="Official Download page for Goneby - Tell your friends where you are without telling your location">
+    <meta property="og:image" content="./img/preview.PNG">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://goneby.me/">
+    <meta property="twitter:title" content="Goneby">
+    <meta property="twitter:description" content="Official Download page for Goneby - Tell your friends where you are without telling your location">
+    <meta property="twitter:image" content="./img/preview.PNG">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/main/main.css">
@@ -38,9 +68,7 @@
         })
     </script>
 
-    <link rel="icon" href="./img/logo/goneby_wing_white.svg" type="image/png">
 
-    <title>GoneBy</title>
 </head>
 
 <body>
@@ -57,7 +85,7 @@
     </header>
 
     <main>
-        <button id="next-slide" onclick="plusSlides(-1)">&larr;</button>
+        <button class="changeSlide" onclick="plusSlides(-1)">&larr;</button>
         <div id="img-slider">
             <div class="img-slider-block">
                 <div class="img-slider-image-wrapper">
@@ -119,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <button id="previous-slide" onclick="plusSlides(1)">&rarr;</button>
+        <button class="changeSlide" onclick="plusSlides(1)">&rarr;</button>
     </main>
 </body>
 

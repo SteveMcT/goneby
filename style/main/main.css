@@ -1,9 +1,7 @@
 main {
   width: 100%;
-  position: absolute;
   left: 0;
   margin-top: 8em;
-  position: relative;
   z-index: 4;
 }
 
@@ -12,17 +10,15 @@ main #img-slider {
   -webkit-perspective: 50px;
           perspective: 50px;
   width: 80%;
-  position: relative;
   display: inline-block;
   vertical-align: middle;
 }
 
 main #img-slider .img-slider-block {
-  position: relative;
   width: 100%;
   height: 100%;
-  -webkit-transition: 1.2s !important;
-  transition: 1.2s !important;
+  -webkit-transition: 1.2s all !important;
+  transition: 1.2s all !important;
 }
 
 main #img-slider .img-slider-block .img-slider-image-wrapper {
@@ -64,23 +60,19 @@ main #img-slider .img-slider-block .img-slider-block-text button {
   margin-top: 2em;
   border: 1px solid white;
   border-radius: 10px;
+  background-repeat: no-repeat;
 }
 
 main #img-slider .img-slider-block .img-slider-block-text .img-slider-block-playstore {
   background-image: url("./../../img/download/google-play-badge.svg");
-  background-repeat: no-repeat;
   margin-right: 2em;
 }
 
 main #img-slider .img-slider-block .img-slider-block-text .img-slider-block-appstore {
   background-image: url("./../../img/download/app-store-badge.svg");
-  background-repeat: no-repeat;
 }
 
-main #next-slide,
-main #previous-slide {
-  display: inline-block;
-  vertical-align: middle;
+main .changeSlide {
   border-radius: 4px;
   position: relative;
   background: transparent;
@@ -94,8 +86,7 @@ main #previous-slide {
   margin: 0 calc(5% - 1.09em);
 }
 
-main #next-slide::before,
-main #previous-slide::before {
+main .changeSlide::before {
   content: '';
   border-radius: 4px;
   position: absolute;
@@ -108,24 +99,20 @@ main #previous-slide::before {
   mix-blend-mode: difference;
 }
 
-main #next-slide:first-child::before,
-main #previous-slide:first-child::before {
+main .changeSlide:first-child::before {
   right: 0;
 }
 
-main #next-slide:last-child::before,
-main #previous-slide:last-child::before {
+main .changeSlide:last-child::before {
   left: 0;
 }
 
-main #next-slide:hover::before,
-main #previous-slide:hover::before {
+main .changeSlide:hover::before {
   mix-blend-mode: difference;
   width: 100%;
 }
 
-main #next-slide:active,
-main #previous-slide:active {
+main .changeSlide:active {
   box-shadow: 0px 0px 14px 0px white;
   -webkit-box-shadow: 0px 0px 14px 0px white;
   -moz-box-shadow: 0px 0px 14px 0px white;
