@@ -36,8 +36,6 @@
     <meta property="twitter:description" content="Official Download page for Goneby - Tell your friends where you are without telling your location">
     <meta property="twitter:image" content="https://i.imgur.com/dsAYykT.png">
 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style/main/main.css">
     <link rel="stylesheet" href="style/header/header.css">
     <link rel="stylesheet" href="style/cursor/cursor.css">
     <link rel="stylesheet" href="style/style.css">
@@ -68,6 +66,207 @@
         })
     </script>
 
+    <style>
+        main {
+            width: 100%;
+            left: 0;
+            margin-top: 8em;
+            z-index: 4;
+        }
+        
+        main #img-slider {
+            height: 80vh;
+            -webkit-perspective: 50px;
+            perspective: 50px;
+            width: 80%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        main #img-slider .img-slider-block {
+            width: 100%;
+            height: 100%;
+            -webkit-transition: 1.2s all !important;
+            transition: 1.2s all !important;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-image-wrapper {
+            display: inline-block;
+            height: 100%;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-image-wrapper .img-slider-image {
+            height: 100%;
+            -webkit-transition: -webkit-transform .2s;
+            transition: -webkit-transform .2s;
+            transition: transform .2s;
+            transition: transform .2s, -webkit-transform .2s;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-block-text {
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            padding: 6em 3em 3em 3em;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-block-text h1 {
+            font-size: 5.4rem;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-block-text p {
+            margin-top: 1em 0;
+            font-size: 1.8rem;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-block-text button {
+            background: #fff;
+            color: transparent;
+            padding: 1.1em 4.4em;
+            background-size: 13em;
+            background-position: center;
+            border-radius: .4em;
+            margin-top: 2em;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-repeat: no-repeat;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-block-text .img-slider-block-playstore {
+            background-image: url("./img/download/google-play-badge.svg");
+            margin-right: 2em;
+        }
+        
+        main #img-slider .img-slider-block .img-slider-block-text .img-slider-block-appstore {
+            background-image: url("./img/download/app-store-badge.svg");
+        }
+        
+        main .changeSlide {
+            border-radius: 4px;
+            position: relative;
+            background: transparent;
+            font-size: 2em;
+            -webkit-transition: .4s box-shadow -webkit-box-shadow -moz-box-shadow;
+            transition: .4s box-shadow -webkit-box-shadow -moz-box-shadow;
+            -webkit-transition: .08s;
+            transition: .08s;
+            width: 2em;
+            color: #fff;
+            margin: 0 calc(5% - 1.09em);
+        }
+        
+        main .changeSlide::before {
+            content: '';
+            border-radius: 4px;
+            position: absolute;
+            height: 100%;
+            width: 0;
+            background: #fff;
+            -webkit-transition: .4s;
+            transition: .4s;
+            top: 0;
+            mix-blend-mode: difference;
+        }
+        
+        main .changeSlide:first-child::before {
+            right: 0;
+        }
+        
+        main .changeSlide:last-child::before {
+            left: 0;
+        }
+        
+        main .changeSlide:hover::before {
+            mix-blend-mode: difference;
+            width: 100%;
+        }
+        
+        main .changeSlide:active {
+            box-shadow: 0px 0px 14px 0px white;
+            -webkit-box-shadow: 0px 0px 14px 0px white;
+            -moz-box-shadow: 0px 0px 14px 0px white;
+        }
+        
+        @media only screen and (max-width: 1460px) {
+            .img-slider-block-text h1 {
+                font-size: 3.8rem !important;
+            }
+            .img-slider-block-text p {
+                font-size: 2rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 1250px) {
+            .img-slider-block-text h1 {
+                font-size: 3.4rem !important;
+            }
+            .img-slider-block-text p {
+                font-size: 1.8rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 1190px) {
+            .img-slider-block-text h1 {
+                font-size: 3.2rem !important;
+            }
+            .img-slider-block-text p {
+                font-size: 1.6rem !important;
+            }
+        }
+        
+        @media only screen and (max-width: 1080px) {
+            .img-slider-block-text {
+                display: block !important;
+                padding: 1rem !important;
+            }
+            .img-slider-block-text h1 {
+                font-size: 4.6rem !important;
+            }
+            .img-slider-block-text p {
+                font-size: 2.2rem !important;
+            }
+            .img-slider-image-wrapper {
+                width: 100%;
+                height: auto !important;
+            }
+            .img-slider-image-wrapper .img-slider-image {
+                width: 100% !important;
+            }
+        }
+        
+        @media only screen and (max-width: 800px) {
+            .img-slider-block-text h1 {
+                text-align: center;
+            }
+            .img-slider-block-text p {
+                font-size: 1.8rem !important;
+                text-align: justify;
+            }
+        }
+        
+        @media only screen and (min-width: 2800px) {
+            .img-slider-block-text h1 {
+                font-size: 6rem !important;
+            }
+            .img-slider-block-text p {
+                font-size: 2.8rem !important;
+            }
+        }
+        
+        @media only screen and (min-width: 4000px) {
+            .img-slider-block-text h1 {
+                font-size: 8rem !important;
+            }
+            .img-slider-block-text p {
+                font-size: 3.4rem !important;
+            }
+            .img-slider-block-text button {
+                padding: 2.5em 7.4em !important;
+                background-size: 20em !important;
+                border: none !important;
+            }
+        }
+    </style>
 
 </head>
 
@@ -76,7 +275,7 @@
     <div class="dl-fill"></div>
 
     <header>
-        <img id="header-logo" src="./img/logo/goneby_wing_white.svg" alt="Logo">
+        <img loading="lazy" id="header-logo" src="./img/logo/goneby_wing_white.svg" alt="Logo">
         <nav>
             <p class="nav-p">Download</p>
             <p class="nav-p">Help</p>
@@ -89,7 +288,7 @@
         <div id="img-slider">
             <div class="img-slider-block">
                 <div class="img-slider-image-wrapper">
-                    <img class="img-slider-image" src="img/wellcum.png" alt="">
+                    <img loading="lazy" class="img-slider-image" src="img/wellcum.png" alt="">
                 </div>
                 <div class="img-slider-block-text">
                     <h1>This is Goneby</h1>
@@ -102,7 +301,7 @@
             </div>
             <div class="img-slider-block">
                 <div class="img-slider-image-wrapper">
-                    <img class="img-slider-image" src="img/login.png" alt="">
+                    <img loading="lazy" class="img-slider-image" src="img/login.png" alt="">
                 </div>
                 <div class="img-slider-block-text">
                     <h1>Secure and Private</h1>
@@ -113,7 +312,7 @@
             </div>
             <div class="img-slider-block">
                 <div class="img-slider-image-wrapper">
-                    <img class="img-slider-image" src="img/room.png" alt="">
+                    <img loading="lazy" class="img-slider-image" src="img/room.png" alt="">
                 </div>
                 <div class="img-slider-block-text">
                     <h1>Free and Unlimited</h1>
@@ -124,7 +323,7 @@
             </div>
             <div class="img-slider-block">
                 <div class="img-slider-image-wrapper">
-                    <img class="img-slider-image" src="img/starterPage.png" alt="">
+                    <img loading="lazy" class="img-slider-image" src="img/starterPage.png" alt="">
                 </div>
                 <div class="img-slider-block-text">
                     <h1>Easy to use</h1>
@@ -136,7 +335,7 @@
             </div>
             <div class="img-slider-block">
                 <div class="img-slider-image-wrapper">
-                    <img class="img-slider-image" src="img/profile.png" alt="">
+                    <img loading="lazy" class="img-slider-image" src="img/profile.png" alt="">
                 </div>
                 <div class="img-slider-block-text">
                     <h1>Give it a try!</h1>
