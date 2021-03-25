@@ -50,3 +50,12 @@
     transform: scale(1.4);
     transition: .3s ease
 }
+
+@media (pointer:none),
+(pointer:coarse) {
+    .dl-cursor,
+    .dl-fill,
+    .dl-fill::before {
+        display: none;
+    }
+}
