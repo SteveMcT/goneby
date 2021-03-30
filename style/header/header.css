@@ -2,7 +2,7 @@
 header {
   position: fixed;
   top: 0;
-  padding: .8em;
+  padding: 0.8em;
   width: 100%;
   background: rgba(255, 255, 255, 0.205);
   -webkit-backdrop-filter: blur(4px);
@@ -18,46 +18,47 @@ header img {
 
 header nav {
   vertical-align: center;
-  margin: .8em 1.8em 0 0;
+  margin: 0.8em 1.8em 0 0;
   float: right;
-  font-family: 'Reem Kufi', sans-serif;
+  font-family: "Reem Kufi", sans-serif;
 }
 
-header nav p {
+header nav a {
+  text-decoration: none;
   display: inline-block;
   vertical-align: center;
   margin-right: 1.2em;
   font-size: 1.2em;
   position: relative;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   color: rgba(255, 255, 255, 0.6942);
 }
 
-header nav p::after, header nav p::before {
-  content: '';
+header nav a::after, header nav a::before {
+  content: "";
   bottom: 0;
   width: 0;
   height: 1px;
   background: #fff;
   position: absolute;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
-header nav p::before {
-  right: -.4em;
+header nav a::before {
+  right: -0.4em;
 }
 
-header nav p::after {
-  left: -.4em;
+header nav a::after {
+  left: -0.4em;
 }
 
-header nav p:hover {
+header nav a:hover {
   color: #fff;
 }
 
-header nav p:hover::after, header nav p:hover::before {
-  width: calc(50% + .4em);
+header nav a:hover::after, header nav a:hover::before {
+  width: calc(50% + 0.4em);
 }
 /*# sourceMappingURL=header.css.map */

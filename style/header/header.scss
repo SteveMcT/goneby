@@ -1,53 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap");
 header {
-    position: fixed;
-    top: 0;
-    padding: .8em;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.205);
-    backdrop-filter: blur(4px);
-    z-index: 400;
-    img {
-        display: inline-block;
-        vertical-align: center;
-        height: 3em;
-    }
-    nav {
-        vertical-align: center;
-        margin: .8em 1.8em 0 0;
-        float: right;
-        font-family: 'Reem Kufi', sans-serif;
-        p {
-            display: inline-block;
-            vertical-align: center;
-            margin-right: 1.2em;
-            font-size: 1.2em;
-            position: relative;
-            transition: .4s;
-            color: rgba(255, 255, 255, 0.6942);
-            &::after,
-            &::before {
-                content: '';
-                bottom: 0;
-                width: 0;
-                height: 1px;
-                background: #fff;
-                position: absolute;
-                transition: .4s;
-            }
-            &::before {
-                right: -.4em;
-            }
-            &::after {
-                left: -.4em;
-            }
-            &:hover {
-                color: #fff;
-                &::after,
-                &::before {
-                    width: calc(50% + .4em)
-                }
-            }
+  position: fixed;
+  top: 0;
+  padding: 0.8em;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.205);
+  backdrop-filter: blur(4px);
+  z-index: 400;
+  img {
+    display: inline-block;
+    vertical-align: center;
+    height: 3em;
+  }
+  nav {
+    vertical-align: center;
+    margin: 0.8em 1.8em 0 0;
+    float: right;
+    font-family: "Reem Kufi", sans-serif;
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: center;
+      margin-right: 1.2em;
+      font-size: 1.2em;
+      position: relative;
+      transition: 0.4s;
+      color: rgba(255, 255, 255, 0.6942);
+      &::after,
+      &::before {
+        content: "";
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background: #fff;
+        position: absolute;
+        transition: 0.4s;
+      }
+      &::before {
+        right: -0.4em;
+      }
+      &::after {
+        left: -0.4em;
+      }
+      &:hover {
+        color: #fff;
+        &::after,
+        &::before {
+          width: calc(50% + 0.4em);
         }
+      }
     }
+  }
 }
